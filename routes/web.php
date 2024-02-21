@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Str;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
 Route::get('/@{username}', function ($username) {
-    return view('dashboard',['username' => $username]);
+    return view('dashboard',['username' => Str::replace(' ','.',trim(Str::lower($username)))]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 /*
