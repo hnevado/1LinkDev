@@ -11,7 +11,9 @@
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
 
-                    {{$username}}
+                    @if ($username === Auth::user()->name)
+                     {{$username}}
+                    @endif
                 </div>
             </div>
         </div>
