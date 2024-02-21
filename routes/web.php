@@ -16,11 +16,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
+Route::get('/@{username}', function ($username) {
+    return view('dashboard',['username' => $username]);
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+/*
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+*/
+
+Route::get('/login', function () {
+    return redirect()->route('home');
+    //return redirect('home');
+})->name('login');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
