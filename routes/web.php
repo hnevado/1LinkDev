@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 /*
@@ -19,10 +20,7 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/@{username}', function ($username) {
-    return view('dashboard',['username' => Str::replace(' ','.',trim(Str::lower($username)))]);
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/@{username}', [PageController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 /*
 Route::get('/dashboard', function () {
     return view('dashboard');

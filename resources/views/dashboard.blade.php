@@ -13,7 +13,14 @@
                 </h2>
 
                  <div class="text-sm text-black hover:text-gray-500">
-                    Aquí mi biografía
+                    Hello! I am using 1LinkDev
+                </div>
+
+                <div class="text-sm text-black hover:text-gray-500 mt-4">
+                    <span class="bg-orange-300 p-1 rounded-full font-bold text-purple-900 cursor-pointer" id="showqr">Show QR Code</span> 
+                    <div class="visible-print text-center flex justify-center items-center mt-4 hidden" id="myqr">
+                        {!! QrCode::backgroundColor(255,237,213)->color(88,28,135)->size(100)->generate(Request::url()); !!}
+                    </div>
                 </div>
              </div>
 
@@ -43,7 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="px-5 mt-6 hidden" id="formLink">
+                    <div class="px-5 mt-6 hidden opacity-0 transition-opacity duration-500" id="formLink">
                         <form name="addLink">
                             @csrf
                         <div>
