@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center justify-center py-10">
         <div class="max-w-md w-full rounded-lg shadow-sm shadow-purple-300 overflow-hidden">
             <div class="bg-gradient-to-r p-5 text-white text-center">
-                <img src="https://gravatar.com/avatar/1ff146b0020a985244c2d05dad7cf0b3c3eda1a33b4ef61fdcb89740944c17de?s=300" 
+                <img src="https://unavatar.io/{{$user->email}}?s=300" 
                      class="h-24 w-24 rounded-full mx-auto">
                 <h2 class="font-semibold leading-tight text-3xl text-center flex items-center justify-center">   
                     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{{'@'.$user->name}}</strong>
