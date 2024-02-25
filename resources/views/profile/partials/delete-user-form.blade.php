@@ -1,6 +1,6 @@
 <section class="space-y-6">
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
+        <h2 class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 font-bold">
             {{ __('Delete Account') }}
         </h2>
 

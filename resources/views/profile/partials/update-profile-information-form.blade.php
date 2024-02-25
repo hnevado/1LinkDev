@@ -1,6 +1,6 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
+        <h2 class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 font-bold">
             {{ __('Profile Information') }}
         </h2>
 
@@ -45,6 +45,12 @@
                     @endif
                 </div>
             @endif
+        </div>
+
+        <div>
+            <x-input-label for="biography" :value="__('Biography')" />
+            <x-text-input id="biography" name="biography" type="text" class="mt-1 block w-full" :value="old('biography', $user->biography)" required autofocus autocomplete="biography" />
+            <x-input-error class="mt-2" :messages="$errors->get('biography')" />
         </div>
 
         <div class="flex items-center gap-4">
