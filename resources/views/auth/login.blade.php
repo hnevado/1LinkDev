@@ -15,28 +15,18 @@
             <!-- thing line -->
             <div class="w-1/2 h-px bg-purple-500"></div>
             <!-- also center horizontally -->
-            <div class="mr-8 flex justify-center items-center">
+            <div class="flex justify-center items-center">
                     
-                    <x-miniatura-perfiles-usuario 
-                     :src="'https://unavatar.io/test?ttl=1h'" 
-                     :alt="'foto perfil'"/>
-
-                     <x-miniatura-perfiles-usuario 
-                     :src="'https://unavatar.io/test?ttl=1h'" 
-                     :alt="'foto perfil'"/>
-
-                     <x-miniatura-perfiles-usuario 
-                     :src="'https://unavatar.io/test?ttl=1h'" 
-                     :alt="'foto perfil'"/>
-
-                     <x-miniatura-perfiles-usuario 
-                     :src="'https://unavatar.io/test?ttl=1h'" 
-                     :alt="'foto perfil'"/>
-
-                     <x-miniatura-perfiles-usuario 
-                     :src="'https://unavatar.io/test?ttl=1h'" 
-                     :alt="'foto perfil'"/>
-            
+                    <!--<span class="mx-1 font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Powered by @hnevado</span> -->
+                    <a class="hover:opacity-75 transition duration-300 ease-in-out mx-1" 
+                       href="https://github.com/hnevado"
+                       rel="noopener noreferrer" 
+                       target="_blank">
+                        <x-miniatura-perfiles-usuario 
+                        :src="'https://unavatar.io/github'" 
+                        :alt="'Github'"/>
+                    </a>
+                    
             </div>
 
             <div class="w-1/2 h-px bg-purple-500"></div>
