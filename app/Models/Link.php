@@ -12,6 +12,7 @@ class Link extends Model
     protected $with = ['user'];
 
     protected $fillable = [
+        'user_id',
         'link',
         'description'
     ];

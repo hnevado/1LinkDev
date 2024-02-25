@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="px-5 mt-6 hidden opacity-0 transition-opacity duration-500" id="formLink">
-                        <form name="addLink">
+                        <form name="addLink" method="POST" action="{{route('createLink')}}">
                             @csrf
                         <div>
                             <x-input-label for="link" :value="__('Link')" class="text-black"/>
@@ -71,7 +71,7 @@
                                     type="text" name="description" placeholder="Example: My Instagram" 
                                     minlength="1" maxlength="120"
                                     required autofocus />
-                            <x-input-error :messages="$errors->get('link')" class="mt-2" />
+                            <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>
 
                         <div class="mt-4">
