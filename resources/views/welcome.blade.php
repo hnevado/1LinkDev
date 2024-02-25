@@ -14,7 +14,7 @@
     </head>
     <body class="antialiased">
 
-        @include('auth/login');
+        @include('auth/login')
 
     </body>
 </html>
