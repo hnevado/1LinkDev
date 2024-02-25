@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'biography'
     ];
 
     /**
@@ -32,6 +33,16 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $attributes = [
+        'biography' => 'Hello! I am using 1LinkDev',
+    ];
+
+    public function links()
+    {
+        
+        return $this->hasMany(Link::class);
+    }
 
     /**
      * The attributes that should be cast.
