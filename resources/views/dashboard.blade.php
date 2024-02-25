@@ -25,27 +25,30 @@
              </div>
 
             <div class="p-5">
-                 <p class="text-center text-black">No links yet. Add your first link!</p>
+                 <p class="text-center text-black">
+                    No links yet. 
+                    @if ($username === Auth::user()->name)
+                     Add your first link!
+                    @endif 
+                  </p>
             </div>
 
-            <div class="px-4">
+            @if ($username === Auth::user()->name)
+
+             <div class="px-4">
                 <div class="py-8">
                     <div class="border-purple-500 border-t"></div>
                 </div>
-            </div>
+             </div>
 
-                <div class="px-5 py-4">
+              <div class="px-5 py-4">
                     <div class="px-5">
                         <div>
                             <button id="bLink" 
                                     class="flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-2 px-4 rounded-lg 
                                            hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-600 transition duration-300 ease-in-out">
                                 <svg class="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-                                
-                                @if ($username === Auth::user()->name)
                                     Add New Link
-                                @endif
-                    
                             </button>
                         </div>
                     </div>
@@ -84,6 +87,7 @@
                     </div>
 
                 </div>
+               @endif
          </div>
     </div>
 
