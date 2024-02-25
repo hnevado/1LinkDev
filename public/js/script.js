@@ -5,23 +5,26 @@ FORMULARIO PARA AÑADIR NUEVOS ENLACES
 let bLink = document.getElementById("bLink");
 let formLink=document.getElementById("formLink");
 
-bLink.addEventListener("click", function (e) {
+if (bLink !== null)
+{
+  bLink.addEventListener("click", function (e) {
 
-   if (formLink.classList.contains("hidden"))
-   {
-    formLink.classList.remove("hidden");
-    formLink.classList.remove("opacity-0");
-    formLink.classList.add("opacity-100");
-   }
-    else 
+    if (formLink.classList.contains("hidden"))
     {
-      formLink.classList.remove("opacity-100");
-      formLink.classList.add("opacity-0");
-      setTimeout(() => {
-        formLink.classList.add("hidden");
-      }, 200);
+      formLink.classList.remove("hidden");
+      formLink.classList.remove("opacity-0");
+      formLink.classList.add("opacity-100");
     }
-});
+      else 
+      {
+        formLink.classList.remove("opacity-100");
+        formLink.classList.add("opacity-0");
+        setTimeout(() => {
+          formLink.classList.add("hidden");
+        }, 200);
+      }
+  });
+}
 
 /* QR CODE */
 

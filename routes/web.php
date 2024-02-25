@@ -3,9 +3,15 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
+
+    if (Auth::check()) 
+        return redirect()->route('dashboard',Auth::user()->name);
+    
     return view('welcome');
+
 })->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {

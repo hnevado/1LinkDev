@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center justify-center py-10">
         <div class="max-w-md w-full rounded-lg shadow-sm shadow-purple-300 overflow-hidden">
             <div class="bg-gradient-to-r p-5 text-white text-center">
-                <img src="https://unavatar.io/{{$user->email}}?s=300" 
+                <img src="{{ Avatar::create($user->name)->setBackground('#6AB0F3')->setForeground('#000000')->toBase64() }}"
                      class="h-24 w-24 rounded-full mx-auto">
                 <h2 class="font-semibold leading-tight text-3xl text-center flex items-center justify-center">   
                     <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">{{'@'.$user->name}}</strong>
