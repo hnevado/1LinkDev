@@ -82,7 +82,9 @@
                             <x-input-label for="link" :value="__('Link')" class="text-black"/>
                             <x-text-input id="link" 
                                     class="w-full border border-purple-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500" 
-                                    type="url" name="link" placeholder="Example: https://mydomain.com" required autofocus />
+                                    type="url" name="link" placeholder="Example: https://mydomain.com" 
+                                    autocomplete="off" 
+                                    required autofocus />
                             <x-input-error :messages="$errors->get('link')" class="mt-2" />
                         </div>
 
@@ -92,6 +94,7 @@
                                     class="w-full border border-purple-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500" 
                                     type="text" name="description" placeholder="Example: My Instagram" 
                                     minlength="1" maxlength="120"
+                                    autocomplete="off" 
                                     required autofocus />
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>

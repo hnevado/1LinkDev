@@ -39,7 +39,7 @@
             <!-- Email Address -->
             <div>
                 <x-input-label for="email" :value="__('Email')" class="text-black"/>
-                <x-text-input id="email" class="w-full border border-purple-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                <x-text-input id="email" class="w-full border border-purple-300 rounded-md py-2 px-3 focus:outline-none focus:border-orange-500" type="email" name="email" :value="old('email')" required autofocus autocomplete="off" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
