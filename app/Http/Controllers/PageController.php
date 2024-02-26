@@ -61,4 +61,18 @@ class PageController extends Controller
 
     }
 
+    /* Request $request, */
+    public function deleteLink(Link $link)
+    {
+
+        $this->authorize('delete-links',$link);
+        $link->delete();
+
+        //$link->where('id',$link->id)->where('user_id',$this->usuario->id)->delete();
+
+        return back();
+
+    }
+
+
 }

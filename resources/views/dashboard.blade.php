@@ -42,13 +42,26 @@
             @else 
 
               @foreach ($user->links as $link)
-
-              <p class="mb-2">
+ 
+              <div class="rounded-lg flex items-center justify-between bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-2 px-4  
+                           hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-600 transition duration-300 ease-in-out text-center mb-2">
                  <a href="{{$link->link}}" rel="noopener noreferrer" target="_blank" 
-                 class="flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-2 px-4 rounded-lg 
-                        hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-600 transition duration-300 ease-in-out">
+                    class="flex-1">
                     {{$link->description}}
-              </a></p>
+                 </a>
+
+                 @if ($owner)
+
+                   <form name="deleteLink" method="POST" action="{{route('deleteLink',$link)}}">
+                        @csrf    
+                        @method('DELETE') 
+                       <x-primary-button class="bg-transparent">
+                                X
+                       </x-primary-button>
+                    </form>
+                
+                 @endif 
+               </div>
               @endforeach
 
 
