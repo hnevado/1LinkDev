@@ -67,7 +67,10 @@
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-black hover:text-purple-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
-                    </a>
+                    </a> 
+                    <a class="mr-4 ml-4 underline text-sm text-purple-500  hover:text-purple-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                        {{ __('Register') }}
+                    </a> 
                 @endif
 
                 <x-primary-button class="ms-3 bg-purple-500">
